@@ -1,0 +1,22 @@
+.my-message {
+    position: relative;
+    max-width: 75%;
+    padding: 12px 16px;
+    color: var(--text-white);
+    background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-dark) 100%);
+    align-self: flex-end;
+    border-radius: 18px 18px 4px 18px;
+    margin: 4px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    box-shadow: var(--shadow-sm);
+    animation: slideInRight 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .my-message {
+      max-width: 85%;
+      font-size: 14px;
+    }
+  }

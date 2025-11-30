@@ -1,0 +1,300 @@
+/* ==================== COLOR PALETTE ==================== */
+:root {
+  /* Primary Colors */
+  --purple-primary: #6c5ce7;
+  --purple-dark: #5f3dc4;
+  --purple-light: #a29bfe;
+  --purple-lighter: #dfe6e9;
+  
+  /* Accent Colors */
+  --blue-accent: #0984e3;
+  --blue-light: #74b9ff;
+  
+  /* Neutral Colors */
+  --gray-dark: #2d3436;
+  --gray-medium: #636e72;
+  --gray-light: #b2bec3;
+  --gray-lighter: #dfe6e9;
+  --gray-lightest: #f5f6fa;
+  
+  /* Semantic Colors */
+  --success: #00b894;
+  --warning: #fdcb6e;
+  --error: #d63031;
+  --info: #74b9ff;
+  
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-chat: #f5f6fa;
+  
+  /* Text Colors */
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --text-light: #b2bec3;
+  --text-white: #ffffff;
+  
+  /* Shadow & Border */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+  --border-radius-lg: 16px;
+}
+
+/* ==================== GLOBAL RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ==================== SCROLLBAR STYLING ==================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-lightest);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-light);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-medium);
+}
+
+/* ==================== LANDING PAGE STYLES ==================== */
+.landing-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple-primary) 100%);
+  padding: 20px;
+}
+
+.landing-content {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.logo {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 16px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tagline {
+  font-size: 20px;
+  color: var(--text-white);
+  margin-bottom: 48px;
+  opacity: 0.95;
+}
+
+/* ==================== VIDEO PAGE STYLES ==================== */
+.video-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+}
+
+.navbar-wrapper {
+  width: 100%;
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .heading {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--blue-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.navbar .heading:hover {
+  transform: scale(1.05);
+}
+
+.page-content {
+  max-width: 1400px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 0 32px;
+  display: flex;
+  gap: 32px;
+  flex: 1;
+}
+
+.left-side {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right-side {
+  flex: 0.8;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1024px) {
+  .page-content {
+    flex-direction: column;
+  }
+  
+  .left-side,
+  .right-side {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+  
+  .navbar .heading {
+    font-size: 28px;
+  }
+  
+  .page-content {
+    padding: 0 20px;
+    margin: 20px auto;
+    gap: 20px;
+  }
+  
+  .logo {
+    font-size: 42px;
+  }
+  
+  .tagline {
+    font-size: 18px;
+  }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.btn {
+  padding: 12px 24px;
+  border-radius: var(--border-radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--purple-primary);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--purple-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  background-color: var(--gray-light);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}

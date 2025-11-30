@@ -1,0 +1,150 @@
+.landing-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+  padding: 20px;
+}
+
+.landing-content {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.logo {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 16px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tagline {
+  font-size: 20px;
+  color: var(--text-white);
+  margin-bottom: 48px;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.landing-input {
+  width: 100%;
+  padding: 18px 24px;
+  font-size: 16px;
+  border: 3px solid transparent;
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.landing-input:focus {
+  border-color: var(--purple-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.landing-input.error {
+  border-color: var(--error);
+  animation: shake 0.4s ease;
+}
+
+.landing-input::placeholder {
+  color: var(--gray-light);
+}
+
+.landing-btn {
+  width: 100%;
+  padding: 18px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--purple-dark);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.landing-btn:hover {
+  background-color: #4c3ba5;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.landing-btn:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: var(--error);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px 20px;
+  border-radius: var(--border-radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  animation: slideInDown 0.3s ease;
+}
+
+.example-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 42px;
+  }
+
+  .tagline {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .landing-input,
+  .landing-btn {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+}
