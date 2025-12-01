@@ -137,7 +137,8 @@ class RAGService:
         try:
             # Fetch transcript from YouTube
             # This returns a list of dictionaries with 'text', 'start', 'duration'
-            transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+            ytt_api =  YouTubeTranscriptApi()
+            transcript_list =ytt_api.fetch(video_id, languages=['en', 'de']).to_raw_data()
             
             # Combine all text segments into one string
             # Why join? It's efficient and creates a single string

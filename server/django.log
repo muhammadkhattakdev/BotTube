@@ -1,0 +1,5 @@
+ERROR 2025-12-01 20:48:12,222 views Error processing chat request: ufunc 'multiply' did not contain a loop with signature matching types (dtype('<U1496'), dtype('<U1496')) -> None
+ERROR 2025-12-01 20:48:58,781 views Error processing chat request: Failed to fetch transcript: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+ERROR 2025-12-01 20:49:45,331 views Error processing chat request: Failed to fetch transcript: 'YouTubeTranscriptApi' object has no attribute 'get_transcript'
+ERROR 2025-12-01 20:51:38,918 views Error processing chat request: Failed to fetch transcript: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+ERROR 2025-12-01 20:53:41,614 views Error processing chat request: Failed to fetch transcript: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'

@@ -44,10 +44,26 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
 # CORS Settings
 CORS_ALLOWED_ORIGINS = [
-    'CORS_ALLOWED_ORIGINS',
-    'http://localhost:3000,http://localhost:5173'
+
+    'http://localhost:3000', 'http://localhost:5173'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -105,3 +121,6 @@ LOGGING = {
         },
     },
 }
+
+STATIC_URL = 'static/'
+ROOT_URLCONF = 'server.urls'
